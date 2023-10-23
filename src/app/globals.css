@@ -16,3 +16,6 @@ body{
   height: 100vh;
   scroll-snap-align: center;
 }
+.sidebar .links > a:hover{
+  @apply text-gray-700 !transform !scale-125 ease-linear duration-100  !transition-transform;
+}
