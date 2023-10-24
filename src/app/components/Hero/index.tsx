@@ -57,7 +57,7 @@ export default function Hero() {
           Freelance content creator influencer
          </p>
       </motion.div>
-        <div className="imageContainer h-full absolute top-0 right-0">
+        <div className="imageContainer h-full absolute top-0 right-20">
           <Image src={"/img/hero.png"} alt="Mustak" width={900} height={300} />
         </div>
     </div>
