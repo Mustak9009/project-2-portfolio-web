@@ -1,6 +1,5 @@
 "use client";
-import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, Variants } from "framer-motion";
 const variants: Variants = {
   open: {
@@ -45,9 +44,23 @@ const linkItemVarients:Variants = {
 }
 export default function Index() {
   const [open, setIsOpen] = useState<boolean>(false);
+  const sideBarRef = useRef<HTMLDivElement | null>(null);
+  useEffect(()=>{
+    const handleOutsideClick = (e:MouseEvent) =>{
+      if(sideBarRef.current && !sideBarRef.current.contains(e.target as Node)){
+        setIsOpen(false);
+      }else{
+        setIsOpen(true);
+      }
+    }
+    document.addEventListener('click',handleOutsideClick);
+    return () =>{
+      document.removeEventListener('click',handleOutsideClick);
+    }
+  },[open]);
   return (
-    <motion.div variants={variants} initial={'close'}   animate={open ? "open" : "close"} className="sidebar bg-white w-[300px] overflow-hidden text-black fixed top-0 left-0 bottom-0">
-       <motion.div variants={linkVarients} className={`links flex  justify-center items-center flex-col absolute top-0 left-0 bottom-0 gap-10 text-2xl w-full h-full [&>a]:font-medium `}>
+    <motion.div variants={variants} initial={'close'}   animate={open ? "open" : "close"} className="sidebar bg-white w-[300px] overflow-hidden text-black fixed top-0 left-0 bottom-0 z-40">
+       <motion.div ref={sideBarRef} variants={linkVarients} className={`links flex  justify-center items-center flex-col absolute top-0 left-0 bottom-0 gap-10 text-2xl w-full h-full [&>a]:font-medium `}>
         <motion.a variants={linkItemVarients} href={"#homePage"}>HomePage</motion.a>
         <motion.a variants={linkItemVarients} href={"#services"}>Services</motion.a>
         <motion.a variants={linkItemVarients} href={"#portfolio"}>Portfolio</motion.a>

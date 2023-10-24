@@ -19,3 +19,10 @@ body{
 .sidebar .links > a:hover{
   @apply text-gray-700 !transform !scale-125 ease-linear duration-100  !transition-transform;
 }
+.hero{
+  height: calc(100vh - 100px);
+  background: linear-gradient(180deg,#0c0c1d,#111132);
+}
+.btn{
+  @apply bg-transparent  px-2 py-3 border border-white rounded-md;
+}
