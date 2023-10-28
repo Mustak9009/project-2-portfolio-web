@@ -1,7 +1,8 @@
-import { Hero, NavBar,Parallax,Services,Portfolio} from "./components";
+import {Hero,NavBar,Parallax,Services,Portfolio,Contact,Whatsapp,Cursor} from "./components";
 export default function Home() {
   return (
     <main className="layout">
+      <Cursor/>
       <section id="homePage" className="component">
         <div className="container mx-auto ">
           <NavBar />
@@ -9,18 +10,19 @@ export default function Home() {
         <Hero />
       </section>
       <section id="services" className="component">
-        <Parallax type="services"/>
+        <Parallax type="services" />
       </section>
       <section id="portfolio" className="component">
-        <Services/>
+        <Services />
       </section>
       <section id="contact" className="component">
-        <Parallax type="portfolio"/>
+        <Parallax type="portfolio" />
       </section>
-      <Portfolio/>
+      <Portfolio />
       <section id="about" className="component">
-        6
+        <Contact />
       </section>
+      <Whatsapp/>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 'use client'
-import { useScroll, useSpring,motion } from 'framer-motion';
-import React from 'react';
+import { useScroll, useSpring,motion, useTransform } from 'framer-motion';
+import React, { useRef } from 'react';
 interface ItemsType{
   id:number,
   img:string,
@@ -26,18 +26,20 @@ const items:ItemsType[] = [
     title:'Next.js portfolio web',
     desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ullam nemo at fugiat ipsa cupiditate. Nulla possimus alias earum quasi asperiores laboriosam qui aut facilis aspernatur provident iure fuga voluptates libero incidunt, delectus atque esse labore accusantium illo numquam saepe tempora dolorum! Distinctio quibusdam magni in ullam numquam, velit expedita!'
   },
-  {
-    id:4,
-    img:'/img/portfolio.png',
-    title:'Next.js portfolio web',
-    desc:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ullam nemo at fugiat ipsa cupiditate. Nulla possimus alias earum quasi asperiores laboriosam qui aut facilis aspernatur provident iure fuga voluptates libero incidunt, delectus atque esse labore accusantium illo numquam saepe tempora dolorum! Distinctio quibusdam magni in ullam numquam, velit expedita!'
-  },
 ];
 const Projects = ({item}:{item:ItemsType})=>{
-  const {id,desc,title,img} = item;
+  const {desc,title,img} = item;
+  const ref = useRef<HTMLTableSectionElement | null>(null);
+  const {scrollYProgress} = useScroll({target:ref,offset:['start start','end start']});
+  const y = useTransform(scrollYProgress,[0,1],['0%',"-200%"]);
   return(
-    <section className='component'>
-      {title}
+    <section ref={ref} className='component overflow-hidden flex justify-center items-center gap-10'>
+      <img src={img} alt='portfolio' width={700} height={100} className='rounded-md'/>
+      <motion.div  className='w-[40%] space-y-5' style={{y}}>
+        <h2 className='text-5xl font-bold'>{title}</h2>
+        <p className='text-gray-500'>{desc}</p>
+        <button className='py-3 rounded-md bg-yellow-500 text-black border-none px-5 hover:bg-yellow-600'>See demo</button>
+      </motion.div>
     </section>
   )
 }
@@ -50,13 +52,16 @@ export default function Portfolio() {
   });
   return (
     <div className='relative' ref={ref}>
-      <div className="progress sticky top-0 left-0 text-center text-5xl font-bold pt-10 text-orange-500">
+      <div className="progress sticky z-10 top-0 left-0 text-center text-5xl font-bold pt-10 text-orange-500">
         <h2>Featured Works</h2>
         <motion.div style={{scaleX}} className="progressbar h-2 bg-gray-300 rounded mt-4"></motion.div>
       </div>
+      <div className='wrapper'>
       {items.map((item)=>(
         <Projects item={item} key={item.id}/>
-      ))}
+        ))}
+      </div>
+      <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-20  left-1/2 right-1/2 w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
     </div>
   )
 }
