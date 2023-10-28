@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-/app/Test.tsx
+Test.tsx
 # next.js
 /.next/
 /out/
