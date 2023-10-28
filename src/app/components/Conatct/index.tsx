@@ -34,8 +34,8 @@ const SVG = ({className}:{className:string}) => {
 };
 export default function Contact() {
   return (
-    <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-between items-center">
-      <motion.div variants={variants} className="textContainer flex-1 flex flex-col gap-5">
+    <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-between items-center flex-col lg:flex-row">
+      <motion.div variants={variants} className="textContainer flex-1 flex flex-col gap-5  w-full px-5">
         <motion.h3 variants={variants} className="text-7xl font-bold">
           Let's work <br /> together
         </motion.h3>
@@ -58,7 +58,7 @@ export default function Contact() {
           </motion.section>
         </motion.div>
       </motion.div>
-      <div className="formContainer flex-1 relative">
+      <div className="formContainer flex-1 relative w-full  px-5">
         <SVG className="absolute m-auto stroke-orange-400 -z-10"/>
         <motion.form initial={{opacity:0}} animate={{opacity:1}} transition={{delay:4,duration:1}} method={"POST"} className="flex flex-col gap-5 z-10">
           <input type="text" required placeholder="Enter name" />

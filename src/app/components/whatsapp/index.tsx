@@ -4,7 +4,7 @@ export default function WhatSapp() {
   return (
     <a href="https://api.whatsapp.com/send?phone=916296917453" target="_blank">
       <svg
-        className="fixed right-52 bottom-10  z-50 fill-green-400 cursor-pointer hover:bg-green-500 rounded-md hover:fill-black transform hover:scale-105 transition-transform"
+        className="fixed right-6 lg:right-52 bottom-10  z-50 fill-green-400 cursor-pointer hover:bg-green-500 rounded-md hover:fill-black transform hover:scale-105 transition-transform"
         width="50px"
         height="50px"
         viewBox="0 0 24 24"

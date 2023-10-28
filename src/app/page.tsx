@@ -12,7 +12,7 @@ export default function Home() {
       <section id="services" className="component">
         <Parallax type="services" />
       </section>
-      <section id="portfolio" className="component">
+      <section id="portfolio" className="lg:h-screen lg:snap-center">
         <Services />
       </section>
       <section id="contact" className="component">

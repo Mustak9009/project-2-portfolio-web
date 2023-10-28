@@ -25,7 +25,7 @@ export default function index() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.2 }}
-            className="admin [&>b]:text-xl"
+            className="admin [&>b]:text-xl mt-1 invisible lg:visible"
           >
             <b>Mustak</b>
           </motion.div>

@@ -33,12 +33,12 @@ const Projects = ({item}:{item:ItemsType})=>{
   const {scrollYProgress} = useScroll({target:ref,offset:['start start','end start']});
   const y = useTransform(scrollYProgress,[0,1],['0%',"-200%"]);
   return(
-    <section ref={ref} className='component overflow-hidden flex justify-center items-center gap-10'>
-      <img src={img} alt='portfolio' width={700} height={100} className='rounded-md'/>
-      <motion.div  className='w-[40%] space-y-5' style={{y}}>
-        <h2 className='text-5xl font-bold'>{title}</h2>
+    <section ref={ref} className='component overflow-hidden flex justify-around lg:justify-center items-center lg:gap-10 flex-col lg:flex-row'>
+      <img src={img} alt='portfolio' width={700} height={100} className='rounded-md mx-20'/>
+      <motion.div  className='w-[90%] lg:w-[40%] space-y-5' style={{y}}>
+        <h2 className='text-4xl lg:text-5xl font-bold'>{title}</h2>
         <p className='text-gray-500'>{desc}</p>
-        <button className='py-3 rounded-md bg-yellow-500 text-black border-none px-5 hover:bg-yellow-600'>See demo</button>
+        <button className='py-2 lg:py-3 rounded-md bg-yellow-500 text-black border-none px-5 hover:bg-yellow-600'>See demo</button>
       </motion.div>
     </section>
   )
@@ -61,7 +61,9 @@ export default function Portfolio() {
         <Projects item={item} key={item.id}/>
         ))}
       </div>
-      <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-20  left-1/2 right-1/2 w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
+      <div className='flex justify-center items-center'>
+        <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-20   w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
+      </div>
     </div>
   )
 }
