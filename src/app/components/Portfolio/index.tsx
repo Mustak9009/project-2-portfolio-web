@@ -52,9 +52,9 @@ export default function Portfolio() {
   });
   return (
     <div className='relative' ref={ref}>
-      <div className="progress sticky z-10 top-0 left-0 text-center text-5xl font-bold pt-10 text-orange-500">
-        <h2>Featured Works</h2>
-        <motion.div style={{scaleX}} className="progressbar h-2 bg-gray-300 rounded mt-4"></motion.div>
+      <div className="progress sticky z-10 top-0 left-0 text-center text-5xl font-bold pt-10 text-white">
+        <h2>Featured <span className='text-orange-300'>Works</span></h2>
+        <motion.div style={{scaleX}} className="progressbar h-1 bg-gray-400 rounded mt-4"></motion.div>
       </div>
       <div className='wrapper'>
       {items.map((item)=>(
