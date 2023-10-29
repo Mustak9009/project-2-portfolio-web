@@ -18,7 +18,7 @@ const variants: Variants = {
 const SVG = ({className}:{className:string}) => {
   return (
     <motion.div className={`messageSVG ${className}`} initial={{opacity:1}} animate={{opacity:0}} transition={{delay:3,duration:1}}>
-    <svg width="400px" height="450px" viewBox="0 0 24 24" fill="none" className="stroke-orange-500" xmlns="http://www.w3.org/2000/svg">
+    <svg  height="450px" viewBox="0 0 24 24" fill="none" className="stroke-orange-500 w-full md:w-[400px]" xmlns="http://www.w3.org/2000/svg">
       <motion.path
         initial={{pathLength:0}}
         whileInView={{pathLength:1}}

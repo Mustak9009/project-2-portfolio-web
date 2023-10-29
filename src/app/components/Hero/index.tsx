@@ -57,8 +57,8 @@ export default function Hero() {
           Freelance content creator influencer
          </p>
       </motion.div>
-        <div className="imageContainer h-full hidden lg:block absolute top-5 right-20">
-          <Image src={"/img/hero.png"} alt="Mustak" width={900} height={300} />
+        <div className="imageContainer  hidden lg:block absolute top-[20%] right-20 xl:right-52 h-1/2 rounded-full outline-double outline-4 outline-gray-700  bg-[#0f0f24]  overflow-hidden">
+          <Image src={"/img/Mustak.png"} alt="Mustak" width={400} height={300}  className="bg-cover"/>
         </div>
     </div>
   );
