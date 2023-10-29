@@ -59,7 +59,7 @@ export default function Index() {
     }
   },[open]);
   return (
-    <motion.div variants={variants} initial={'close'}   animate={open ? "open" : "close"} className="sidebar bg-white w-[300px] overflow-hidden text-black fixed top-0 left-0 bottom-0 z-40">
+    <motion.div variants={variants} initial={'close'}   animate={open ? "open" : "close"} className="sidebar bg-white w-full sm:w-[300px] overflow-hidden text-black fixed top-0 left-0 bottom-0 z-40">
        <motion.div ref={sideBarRef} variants={linkVarients} className={`links flex  justify-center items-center flex-col absolute top-0 left-0 bottom-0 gap-10 text-2xl w-full h-full [&>a]:font-medium `}>
         <motion.a variants={linkItemVarients} href={"#homePage"}>HomePage</motion.a>
         <motion.a variants={linkItemVarients} href={"#services"}>Services</motion.a>

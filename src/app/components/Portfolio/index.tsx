@@ -62,7 +62,7 @@ export default function Portfolio() {
         ))}
       </div>
       <div className='flex justify-center items-center'>
-        <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-20   w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
+        <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-7 lg:bottom-20  w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
       </div>
     </div>
   )

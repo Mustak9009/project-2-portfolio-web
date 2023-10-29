@@ -26,24 +26,25 @@ body{
 .btn{
   @apply bg-transparent  lg:px-2 p-2 lg:py-3 border border-white rounded-md;
 }
-
+.parallax{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .parallax .mountains{
   background-image: url('~/public/img/mountains.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: bottom;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 3;
-}
-.parallax .planets{
-  background-image: url('~/public/img/planets.png');
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 2;
+  @apply lg:bg-cover lg:bg-repeat;
 }
 .parallax .stars{
   background-image: url('~/public/img/stars.png');
