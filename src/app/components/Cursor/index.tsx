@@ -12,7 +12,6 @@ export default function Cursor() {
             window.removeEventListener('mousemove',trackMouse);
         } 
     },[]);
-     console.log(position);
     return (
     <motion.div className='border border-orange-200  z-50 fixed p-5 rounded-full' animate={{x:position.x,y:position.y}}/>
   )
