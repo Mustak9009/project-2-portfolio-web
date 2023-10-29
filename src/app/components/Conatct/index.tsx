@@ -36,10 +36,10 @@ export default function Contact() {
   return (
     <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-between items-center flex-col lg:flex-row">
       <motion.div variants={variants} className="textContainer flex-1 flex flex-col gap-5  w-full px-5">
-        <motion.h3 variants={variants} className="text-7xl font-bold">
+        <motion.h3 variants={variants} className="text-5xl lg:text-7xl font-bold">
           Let&#39;s work <br /> together
         </motion.h3>
-        <motion.div variants={variants} className="[&>section>h4]:text-xl [&>section>h4]:font-bold space-y-5">
+        <motion.div variants={variants} className="lg:[&>section>h4]:text-xl [&>section>h4]:font-bold space-y-5">
           <motion.section variants={variants}>
             <h4>Mail</h4>
             <a href="mailto:mustaksk62913@gmail.com">
@@ -65,7 +65,7 @@ export default function Contact() {
           <input type="email" required placeholder="Enter email" />
           <textarea name="send_message"  rows={8} placeholder="Type message..." className="border border-white p-1 rounded outline-none bg-transparent "
           ></textarea>
-          <button type="submit" className="bg-orange-500 py-2 w-full text-black  rounded hover:bg-orange-600">
+          <button type="submit" className="bg-orange-500 py-1 lg:py-2 w-full text-black  rounded hover:bg-orange-600">
             Send message 
           </button>
         </motion.form>

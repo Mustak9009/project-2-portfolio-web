@@ -52,7 +52,7 @@ export default function Portfolio() {
   });
   return (
     <div className='relative' ref={ref}>
-      <div className="progress sticky z-10 top-0 left-0 text-center text-5xl font-bold pt-10 text-white">
+      <div className="progress sticky z-10 top-0 left-0 text-center text-2xl lg:text-5xl font-bold pt-10 text-white">
         <h2>Featured <span className='text-orange-300'>Works</span></h2>
         <motion.div style={{scaleX}} className="progressbar h-1 bg-gray-400 rounded mt-4"></motion.div>
       </div>
