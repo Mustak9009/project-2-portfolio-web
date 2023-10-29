@@ -37,7 +37,7 @@ export default function Contact() {
     <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-between items-center flex-col lg:flex-row">
       <motion.div variants={variants} className="textContainer flex-1 flex flex-col gap-5  w-full px-5">
         <motion.h3 variants={variants} className="text-7xl font-bold">
-          Let's work <br /> together
+          Let&#39;s work <br /> together
         </motion.h3>
         <motion.div variants={variants} className="[&>section>h4]:text-xl [&>section>h4]:font-bold space-y-5">
           <motion.section variants={variants}>
@@ -48,7 +48,7 @@ export default function Contact() {
           </motion.section>
           <motion.section variants={variants}>
             <h4>Address</h4>
-            <span>Bhakuri murshidabd berhampore</span>
+            <span>Bhakuri murshidabd   berhampore</span>
           </motion.section>
           <motion.section variants={variants}>
             <h4>Phone or whatsApp</h4>
@@ -66,7 +66,7 @@ export default function Contact() {
           <textarea name="send_message"  rows={8} placeholder="Type message..." className="border border-white p-1 rounded outline-none bg-transparent "
           ></textarea>
           <button type="submit" className="bg-orange-500 py-2 w-full text-black  rounded hover:bg-orange-600">
-            Send message
+            Send message 
           </button>
         </motion.form>
       </div>
