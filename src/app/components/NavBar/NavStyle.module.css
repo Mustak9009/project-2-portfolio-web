@@ -1,5 +1,5 @@
 .social{
-    @apply flex justify-center items-center h-[60px] gap-5;
+    @apply flex justify-center items-center h-[60px] gap-5 mt-2;
 }
 .social > li{
     list-style: none;

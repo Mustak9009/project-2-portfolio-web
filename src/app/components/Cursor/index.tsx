@@ -13,6 +13,6 @@ export default function Cursor() {
         } 
     },[]);
     return (
-    <motion.div className='border border-orange-200  z-50 fixed p-5 rounded-full' animate={{x:position.x,y:position.y}}/>
+    <motion.div className='border border-orange-200  z-50 fixed p-5 rounded-full hidden md:block' animate={{x:position.x,y:position.y}}/>
   )
 }

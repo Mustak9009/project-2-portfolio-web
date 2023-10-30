@@ -33,7 +33,7 @@ const Projects = ({item}:{item:ItemsType})=>{
   const {scrollYProgress} = useScroll({target:ref,offset:['start start','end start']});
   const y = useTransform(scrollYProgress,[0,1],['0%',"-200%"]);
   return(
-    <section ref={ref} className='component overflow-hidden flex justify-around lg:justify-center items-center lg:gap-10 flex-col lg:flex-row'>
+    <section ref={ref} className='component overflow-hidden flex  justify-center items-center gap-10 flex-col lg:flex-row'>
       <img src={img} alt='portfolio' width={700} height={100} className='rounded-md mx-20'/>
       <motion.div  className='w-[90%] lg:w-[40%] space-y-5' style={{y}}>
         <h2 className='text-4xl lg:text-5xl font-bold'>{title}</h2>
@@ -52,7 +52,7 @@ export default function Portfolio() {
   });
   return (
     <div className='relative' ref={ref}>
-      <div className="progress sticky z-10 top-0 left-0 text-center text-2xl lg:text-5xl font-bold pt-10 text-white">
+      <div className="progress sticky z-10 top-0 left-0 text-center text-3xl  lg:text-5xl font-bold pt-10 text-white">
         <h2>Featured <span className='text-orange-300'>Works</span></h2>
         <motion.div style={{scaleX}} className="progressbar h-1 bg-gray-400 rounded mt-4"></motion.div>
       </div>
@@ -62,7 +62,7 @@ export default function Portfolio() {
         ))}
       </div>
       <div className='flex justify-center items-center'>
-        <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-7 lg:bottom-20  w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
+        <motion.button whileInView={{y:0,opacity:1}} initial={{y:-10,opacity:0}} onClick={()=>window.alert('Available in the future.')} className='absolute bottom-10 w-36 btn hover:bg-yellow-500 hover:text-black hover:border-none'>See more</motion.button>
       </div>
     </div>
   )
