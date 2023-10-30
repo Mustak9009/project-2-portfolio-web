@@ -38,7 +38,7 @@ export default function Services() {
   const isInView = useInView(ref);
   return (
     <motion.div variants={variants} ref={ref}  initial='initial' animate={isInView && 'animate'}  className="services flex flex-col justify-between">
-      <div className="text_container mt-5 lg:mt-0 flex-[1] self-end flex items-center gap-7 [&>hr]:w-96  [&>hr]:border-t [&>hr]:border-gray-500">
+      <div className="text_container mt-5 lg:mt-0 flex-[1] self-end hidden md:flex items-center gap-7 [&>hr]:w-96  [&>hr]:border-t [&>hr]:border-gray-500 ">
         <p className="text-right text-gray-500  font-light">
           I focus on helping your brand grow
           <br />
