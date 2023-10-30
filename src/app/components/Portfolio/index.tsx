@@ -35,10 +35,10 @@ const Projects = ({item}:{item:ItemsType})=>{
   return(
     <section ref={ref} className='component overflow-hidden flex  justify-center items-center gap-10 flex-col lg:flex-row'>
       <img src={img} alt='portfolio' width={700} height={100} className='rounded-md mx-20'/>
-      <motion.div  className='w-[90%] lg:w-[40%] space-y-5' style={{y}}>
+      <motion.div  className='w-[90%] lg:w-[40%] space-y-5 text-center md:text-left' style={{y}}>
         <h2 className='text-4xl lg:text-5xl font-bold'>{title}</h2>
         <p className='text-gray-500'>{desc}</p>
-        <button className='py-2 lg:py-3 rounded-md bg-yellow-500 text-black border-none px-5 hover:bg-yellow-600'>See demo</button>
+        <button className='py-2 lg:py-3 rounded-md bg-yellow-500 text-black border-none px-5 w-full md:w-32 hover:bg-yellow-600'>See demo</button>
       </motion.div>
     </section>
   )

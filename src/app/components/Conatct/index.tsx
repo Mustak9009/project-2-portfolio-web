@@ -34,7 +34,7 @@ const SVG = ({className}:{className:string}) => {
 };
 export default function Contact() {
   return (
-    <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-center lg:justify-between items-center flex-col lg:flex-row">
+    <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-center lg:justify-between items-center flex-col lg:flex-row ">
       <motion.div variants={variants} className="textContainer flex-1 flex flex-col mb-10 justify-end text-center md:text-left  w-full px-5">
         <motion.h3 variants={variants} className="text-5xl lg:text-7xl font-bold mb-10">
           Let&#39;s work <br /> together
