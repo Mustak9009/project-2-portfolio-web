@@ -48,7 +48,7 @@ export default function Services() {
       </div>
       <motion.div variants={variants} className="title_container self-center flex-[2] space-y-2">
         <div className="title flex flex-col justify-center items-center gap-5 mt-10 text-center">
-          <img src="/img/people.webp" className="w-60 h-20 object-cover rounded-full" alt="people" width={100} height={100} />
+          <img src="/img/people.webp" className="w-60 h-10 md:h-10 object-cover rounded-full" alt="people" width={100} height={100} />
           <h2 className="text-4xl md:text-7xl">
             <motion.b whileHover={{color:'orange'}}>Unique</motion.b> {" "}
             <span className="font-thin">Ideas</span>
@@ -58,7 +58,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-7xl">
             <motion.b whileHover={{color:'orange'}}>For your</motion.b> <span className="font-thin">Business.</span>
           </h2>
-          <button className="px-8 py-2 md:py-4 sm:mt-10 md:mt-0 bg-yellow-600 text-black rounded-full border-none text-xl hover:bg-yellow-500 mb-10 lg:mb-0">What we do?</button>
+          <button className="px-8 py-2 md:py-4 sm:mt-10 md:mt-0 bg-yellow-600 text-black rounded-full border-none text-xl hover:bg-yellow-500  lg:mb-0">What we do?</button>
         </div>
       </motion.div>
       <motion.div variants={variants} className="list_container flex-[2] flex max-w-[1500px] mx-auto gap-5 flex-col md:flex-row justify-center items-center px-10 pb-20">
