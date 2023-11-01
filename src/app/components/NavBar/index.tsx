@@ -33,8 +33,8 @@ export default function index() {
             <motion.li variants={varients}>
               <Link href={"#"}>
                 <Image
-                  src={"/img/facebook.png"}
-                  alt="Facebook"
+                  src={"/img/instagram.png"}
+                  alt="Github"
                   width={30}
                   height={30}
                   loading="lazy"
@@ -44,7 +44,7 @@ export default function index() {
             <motion.li variants={varients}>
               <Link href={"#"}>
                 <Image
-                  src={"/img/instagram.png"}
+                  src={"/img/github.png"}
                   alt="Facebook"
                   width={30}
                   height={30}
