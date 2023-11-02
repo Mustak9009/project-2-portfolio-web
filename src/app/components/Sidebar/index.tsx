@@ -65,7 +65,6 @@ export default function Index() {
         <motion.a variants={linkItemVarients} href={"#services"}>Services</motion.a>
         <motion.a variants={linkItemVarients} href={"#portfolio"}>Portfolio</motion.a>
         <motion.a variants={linkItemVarients} href={"#contact"}>Contact</motion.a>
-        <motion.a variants={linkItemVarients} href={"#about"}>About</motion.a>
       </motion.div>
       <button type="button" onClick={() => setIsOpen(!open)} className="absolute top-6 left-[38px]">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"  viewBox="0 0 25 25">

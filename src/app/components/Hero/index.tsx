@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import {motion,Variants} from 'framer-motion';
+import Link from 'next/link';
 const textVariants:Variants = {
   initial:{
     x:-500,
@@ -46,8 +47,16 @@ export default function Hero() {
           <motion.span variants={textVariants} className="uppercase text-purple-800 text-xl lg:text-2xl tracking-widest font-semibold">Mustak sk</motion.span>
           <motion.h1 variants={textVariants} className="text-5xl md:text-7xl lg:text-[5rem] font-semibold leading-tight text-center md:text-left">Full stack web Developer</motion.h1>
           <motion.div variants={textVariants} className="md:space-x-5 flex flex-col md:flex-row gap-5 md:gap-0">
-            <motion.button variants={textVariants} className="btn">See the latest works</motion.button>
-            <motion.button variants={textVariants} className="btn !bg-white text-black hover:!bg-gray-100">Contact me</motion.button>
+            <motion.button variants={textVariants} className="btn">
+              <Link href={'#portfolio'}>
+                See the latest works
+              </Link>
+              </motion.button>
+            <motion.button variants={textVariants} className="btn !bg-white text-black hover:!bg-gray-100">
+              <Link href={'#contact'}>
+                Contact me
+              </Link>
+              </motion.button>
           </motion.div>
           <motion.img variants={textVariants} animate={'scrollButton'} src={'/img/scroll.png'} alt="scroll" width={50} height={50}/>
         </motion.div>

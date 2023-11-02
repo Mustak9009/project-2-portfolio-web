@@ -19,14 +19,14 @@ export default function Home() {
       <section id="services" className="component">
         <Parallax type="services" />
       </section>
-      <section id="portfolio" className="lg:h-screen snap-start lg:snap-center">
+      <section id="about" className="lg:h-screen snap-start lg:snap-center">
         <Services />
       </section>
-      <section id="contact" className="component">
+      <section id="portfolio" className="component">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      <section id="about" className="component">
+      <section id="contact" className="component relative">
         <Contact />
       </section>
       <Whatsapp/>

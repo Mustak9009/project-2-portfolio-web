@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query";
 import { message } from "@/helper/apiHelper";
 import "../admin.css";
 type userType = {
- 
     id: string;
     name: string;
     email: string;
@@ -57,7 +56,10 @@ const User = ({ userId, setUserById, id, toggle, setToggle, user}: {userId: null
 export default function Page() {
   const [userId, setUserById] = React.useState<null | string>(null);
   const [toggle, setToggle] = React.useState<boolean>(false);
-  const { data, isLoading} = useQuery({queryKey: ["users"],queryFn: message});
+  const { data, isLoading} = useQuery({queryKey: ["users"],queryFn: message,staleTime:10000});
+  if(isLoading){
+    return <p>Loading ...</p>
+  }
   return (
     <div className="Container">
       {data && data.users.map((user:userType) => (

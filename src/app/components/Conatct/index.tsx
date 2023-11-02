@@ -1,6 +1,9 @@
 "use client";
 import React from "react";
 import { motion, Variants } from "framer-motion";
+import {messagePost} from '@/helper/apiHelper';
+import {useMutation} from '@tanstack/react-query';
+import {useFormik} from 'formik';
 const variants: Variants = {
   initial: {
     y: 500,
@@ -33,6 +36,22 @@ const SVG = ({className}:{className:string}) => {
   );
 };
 export default function Contact() {
+  const {mutate,status} = useMutation({mutationKey:['send_message'],mutationFn:messagePost});
+  const {values,handleChange,handleSubmit,resetForm} = useFormik({
+    initialValues:{
+      name:'',
+      email:'',
+      message:''
+    },
+    onSubmit:({name,email,message})=>{
+      mutate({name,email,message});
+      resetForm();
+    }
+  });
+  
+  if(status==='success'){
+    alert('Message send successfully😊');
+  }
   return (
     <motion.div variants={variants} initial="initial" whileInView={"animate"} className="container h-full max-w-[1500px] mx-auto flex justify-center lg:justify-between items-center flex-col lg:flex-row ">
       <motion.div variants={variants} className="textContainer flex-1 flex flex-col mb-10 justify-end text-center md:text-left  w-full px-5">
@@ -60,10 +79,10 @@ export default function Contact() {
       </motion.div>
       <div className="formContainer flex-1 relative w-full  px-5">
         <SVG className="absolute m-auto stroke-orange-400 -z-10"/>
-        <motion.form initial={{opacity:0}} animate={{opacity:1}} transition={{delay:4,duration:1}} method={"POST"} className="flex flex-col gap-5 z-10">
-          <input type="text" required placeholder="Enter name" />
-          <input type="email" required placeholder="Enter email" />
-          <textarea name="send_message"  rows={8} placeholder="Type message..." className="border border-white p-1 rounded outline-none bg-transparent "
+        <motion.form initial={{opacity:0}} onSubmit={handleSubmit} animate={{opacity:1}} transition={{delay:4,duration:1}} method={"POST"} className="flex flex-col gap-5 z-10">
+          <input type="text" required placeholder="Enter name" name="name" value={values.name} onChange={handleChange}/>
+          <input type="email" required placeholder="Enter email"  name="email" value={values.email} onChange={handleChange}/>
+          <textarea name="message" value={values.message} onChange={handleChange}  rows={8} placeholder="Type message..." className="border border-white p-1 rounded outline-none bg-transparent "
           ></textarea>
           <button type="submit" className="bg-orange-500 py-1 lg:py-2 w-full text-black  rounded hover:bg-orange-600">
             Send message 
