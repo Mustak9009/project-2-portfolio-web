@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import {Hero,NavBar,Parallax,Services,Portfolio,Contact,Whatsapp,Cursor} from "./components";
+export const metadata: Metadata = {
+  title: "Full stack web Developer - Mustak",
+  description:
+    "Skilled Full Stack Web Developer: Proficient in front-end and back-end technologies, creating dynamic, secure, and responsive web applications. nextjs,reactjs",
+};
+
 export default function Home() {
   return (
     <main className="layout">

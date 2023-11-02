@@ -1,0 +1,59 @@
+/* --------------------------------------Social------------------------------------- */
+.social{
+    @apply h-[50vh] flex justify-center items-start;
+}
+.social > form{
+    @apply flex justify-center items-center flex-col space-y-5 mt-10;
+}
+.social > form > input[type="text"]{
+    @apply bg-transparent border p-2 rounded outline-none w-[30rem];
+}
+.social > form > input[type="submit"]{
+    @apply bg-orange-500 text-black py-1 px-3 rounded self-start cursor-pointer;
+}
+/* -------------------------------------Message--------------------------------------- */
+svg{
+    @apply text-white fill-white
+}
+.Container{
+    @apply h-[50vh] flex flex-col w-full justify-start items-center;
+}
+.Container > .wrapper{
+    @apply flex justify-between items-center w-1/2 my-5 border rounded-md border-gray-400 p-2;
+}
+.Container > .wrapper > div{
+    @apply flex justify-center items-center
+}
+.Container > .wrapper > .user{
+    &>svg{
+        @apply text-5xl border-2 p-1 rounded-full h-14 w-14 mr-3
+    }
+    &>div>span:first-child{
+        @apply text-xl font-bold
+    }
+}
+.Container  .wrapper > .toogle_message svg{
+    @apply transform transition-transform  self-start font-bold cursor-pointer mr-5
+}
+.Container > .message{
+    @apply w-1/2 border p-1 rounded-md;
+}
+/*----------------------------------------Project------------------------------------------*/
+.project{
+    @apply h-[50vh] flex flex-col w-full justify-start items-center;
+}
+.project > form div{
+    @apply flex flex-col mb-5;
+}
+.project > form div > input{
+    @apply bg-transparent  px-3 py-2 w-[30rem] border rounded-md outline-none;
+}
+.project > form div > label{
+    @apply font-bold text-lg;
+}
+.project > form button[type='submit']{
+    @apply px-5 py-2 bg-orange-500 text-black rounded-md
+}
+.project > form  textarea{
+    @apply  bg-transparent border outline-none rounded-md p-2
+}
