@@ -14,7 +14,7 @@ const varients = {
     transition: { type: "spring",staggerChildren:0.1  },
   },
 };
-export default function index() {
+export default function NavBar() {
   const [links,setLinks] = React.useState({github:'',instagram:'',youtube:''})
   React.useEffect(()=>{
     const getSocialLinks = async()=>{

@@ -42,7 +42,7 @@ const linkItemVarients:Variants = {
     opacity:0
   }
 }
-export default function Index() {
+export default function Sidebar() {
   const [open, setIsOpen] = useState<boolean>(false);
   const sideBarRef = useRef<HTMLDivElement | null>(null);
   useEffect(()=>{

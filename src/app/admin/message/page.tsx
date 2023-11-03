@@ -62,7 +62,7 @@ export default function Page() {
   }
   return (
     <div className="Container">
-      {data && data.users.map((user:userType) => (
+      {data ? data.users.map((user:userType) => (
           <User
             key={user.id}
             userId={userId}
@@ -72,7 +72,9 @@ export default function Page() {
             user={user}
             setToggle={setToggle}
           />
-        ))}
+        )):(
+          <p>Do not send any message by user</p>
+        )}
     </div>
   );
 }
