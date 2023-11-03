@@ -22,7 +22,7 @@ export default function Page() {
     mutationKey: ["admin"],
     mutationFn: adminPosthandler,
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
     mutate({ password });
   };
