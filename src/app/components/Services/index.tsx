@@ -15,18 +15,13 @@ const variants:Variants = {
     }
   }
 }
-function Box() {
+function Box({title,description}:{title:string,description:string}) {
   return (
     <motion.div variants={variants} className="box border-2 border-yellow-700 p-5 flex justify-between flex-col items-start  rounded-md ">
       <section className="space-y-10">
-        <h2 className="text-2xl font-bold">Branding</h2>
+        <h2 className="text-2xl font-bold">{title}</h2>
         <p className="text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-          nemo veniam, quam cum nesciunt officia voluptatibus qui natus ab eaque
-          nulla iusto alias quaerat eum soluta enim laudantium pariatur
-          recusandae aliquid necessitatibus, ut blanditiis dolor. Alias
-          architecto tenetur vitae voluptates officiis error voluptatem quas
-          adipisci, labore fuga expedita maxime consequuntur?
+        {description}
         </p>
       </section>
       <button className="btn w-32 hover:text-yellow-600 mt-4">Go</button>
@@ -62,9 +57,9 @@ export default function Services() {
         </div>
       </motion.div>
       <motion.div variants={variants} className="list_container flex-[2] flex max-w-[1500px] mx-auto gap-5 flex-wrap lg:flex-nowrap px-10">
-        <Box/>
-        <Box/>
-        <Box/>
+        <Box title={'Branding'} description={"Our branding services shape your brand's identity, strategy, and messaging. We craft unique visual identities, compelling storytelling, and brand collateral, ensuring a consistent and memorable customer experience. Elevate your business, stand out in the market, and forge strong connections with your target audience through our comprehensive branding expertise."}/>
+        <Box title={'Web app service'} description={"We're your go-to for web app services. From custom development to user-friendly interfaces, we create web applications that redefine user experiences. Elevate your online presence and business operations with our cutting-edge solutions."}/>
+        <Box title={'Online presence'} description={"We specialize in optimizing your online presence. From crafting engaging websites to managing social media and content, we ensure you make a memorable impact in the digital world. Let us boost your visibility, credibility, and engagement online, helping you reach your target audience effectively."}/>
       </motion.div>
     </motion.div>
   );
