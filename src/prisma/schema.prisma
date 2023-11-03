@@ -31,7 +31,9 @@ model Message {
   email   String
   message String
 }
-model Admin{
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  isAdmin Boolean?
+
+model Admin {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  isAdmin  Boolean?
+  password String?
 }
