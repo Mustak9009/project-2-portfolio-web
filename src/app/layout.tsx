@@ -3,7 +3,6 @@ import {QueryClientProvider,QueryClient} from '@tanstack/react-query';
 import "./globals.css";
 
 const queryClient = new QueryClient();
-export const dynamic = 'force-static'
 export default function RootLayout({
   children,
 }: {
